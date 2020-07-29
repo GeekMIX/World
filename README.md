@@ -1,4 +1,4 @@
 # World
 
-Abstract world
+Abstract the world into code
 

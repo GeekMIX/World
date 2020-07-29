@@ -1,8 +1,6 @@
 package pers.mcc.test;
 
-import pers.mcc.article.Metal;
-import pers.mcc.article.Voltage;
-import pers.mcc.article.Wire;
+import pers.mcc.article.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +20,22 @@ public class Test {
         voltages.add(new Voltage(true));
         voltages.add(new Voltage(true));
 
+        ElectromagneticWave eWave = new ElectromagneticWave();
+        Telegraph t1 = new Telegraph();
+        Telegraph t2 = new Telegraph();
 
-        // reading voltage
-        for (Voltage voltage:voltages){
-            System.out.println(voltage.isHighVoltage());
-        }
+        t1.connect(eWave);
+        t1.connect(wire);
+        t1.send(voltages);
+
+        t2.connect(eWave);
+        t2.connect(wire);
+        t2.receive();
+
+
+
+
+
 
 
 

@@ -3,22 +3,38 @@ package pers.mcc.article;
 import pers.mcc.base.Line;
 import pers.mcc.base.Material;
 
+import java.util.List;
+
 public class Wire extends Line {
 
-    public boolean voltage;
+
+
+    private Boolean power;
+    private List<Voltage> voltages;
     public Wire() {
     }
+
+
+
     public Wire(double length, double diameter, Material material){
         setLength(length);
         setDiameter(diameter);
         setMaterial(material);
     }
 
-    public boolean isVoltage() {
-        return voltage;
+    public List<Voltage> getVoltages() {
+        return voltages;
     }
 
-    public void setVoltage(boolean voltage) {
-        this.voltage = voltage;
+    public void setVoltages(List<Voltage> voltages) {
+        this.voltages = voltages;
     }
+
+    public Boolean getPower() {
+        return power;
+    }
+    public void setPower(Boolean power) {
+        this.power = power;
+    }
+
 }
